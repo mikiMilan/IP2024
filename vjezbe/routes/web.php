@@ -17,8 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kuca', function () {
-    $auto = ['BMV', 'AUDI'];
-    return view('auta', ["auta"=>$auto]);
+Route::get('/posts', function () {
+
+    $posts = [
+        1 => ["Naziv 1", "Opis"],
+        2 => ["Guzva u BL", "Veliko je cekanje na Venecija mostu."],
+        3 => ["Dolazi prija u BL", "U martu Aleksandra Prijevic ima koncert"],
+        4 => ["          <script>alert('Cao! :)')      </script>", "---"]
+    ];
+
+    return view('posts', ['posts'=>$posts]);
 });
 
