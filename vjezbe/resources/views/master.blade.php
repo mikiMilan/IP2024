@@ -15,7 +15,8 @@
 
     <nav>
         <ul>
-            <li>Link </li>
+            <li><a href="/">Pocetna</a></li>
+            <li><a href="/posts">Novosti</a></li>
         </ul>
     </nav>
 

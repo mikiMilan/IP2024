@@ -29,3 +29,21 @@ Route::get('/posts', function () {
     return view('posts', ['posts'=>$posts]);
 });
 
+
+Route::get('/post/{id}', function ($id) {
+
+    $posts = [
+        1 => ["Naziv 1", "Opis"],
+        2 => ["Guzva u BL", "Veliko je cekanje na Venecija mostu."],
+        3 => ["Dolazi prija u BL", "U martu Aleksandra Prijevic ima koncert"],
+        4 => ["          <script>alert('Cao! :)')      </script>", "---"]
+    ];
+
+    // $id = Route::input('id');
+
+    if(key_exists($id, $posts)){
+        return view('post', ['post'=>$posts[$id]]);
+    }else
+        abort(404, "Ovaj članak ne postoji");
+
+});
