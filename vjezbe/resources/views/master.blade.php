@@ -5,31 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Online ucenje')</title>
+   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Online ucenje</h1>
-    </header>
 
-    <p>----------------------------------------------------</p>
-
-    <nav>
-        <ul>
-            <li><a href="/">Pocetna</a></li>
-            <li><a href="/posts">Novosti</a></li>
-        </ul>
-    </nav>
-
-    <p>----------------------------------------------------</p>
+    @include('parts/meni')
 
     <section>
         @yield('main-content')
     </section>
 
-    <p>----------------------------------------------------</p>
-
-    <footer>
+    <footer class="container-full text-center bg-secondary text-white mt-4 py-2">
         2024 - IP
     </footer>
+
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
 </html>

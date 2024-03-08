@@ -3,17 +3,24 @@
 @section('title', 'Online ucenje - Novosti')
 
 @section('main-content')
-    <h2>Novosti</h2>
-
-    @foreach($posts as $key=>$post)
-        @if($post[0]=="Naziv 1")
-            <p>Preskocena vijest</p>
-        @else
-            <h3>
-                <a href="/post/{{ $key }}">{{$post[0]}}</a>
-            </h3>
-            <p>{{$post[1]}}</p>
-        @endif
-    @endforeach
+    <div class="container">
+        <div class="row">
+            <h2>Novosti</h2>
+        </div>
+        <div class="row">
+            @foreach($posts as $key=>$post)
+            <div class="col-3">
+                <div class="card">
+                    <img src="{{ asset("img/images.jpeg") }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{$post[0]}}</h5>
+                    <p class="card-text">{{$post[1]}}</p>
+                    <a href="/post/{{ $key }}" class="btn btn-primary">Pročitajte više</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
 

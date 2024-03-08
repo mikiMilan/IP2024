@@ -63,5 +63,7 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "laravelcollective/html": "5.2.*"
+
 }
