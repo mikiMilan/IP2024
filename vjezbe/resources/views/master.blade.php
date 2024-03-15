@@ -12,7 +12,9 @@
     @include('parts/meni')
 
     <section>
-        @yield('main-content')
+        <div class="container">
+            @yield('main-content')
+        </div>
     </section>
 
     <footer class="container-full text-center bg-secondary text-white mt-4 py-2">
